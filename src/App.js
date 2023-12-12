@@ -16,6 +16,7 @@ function App() {
         <MainNavigation />
         <Routes>
           <Route index element={<Home />} />
+          <Route path="/tours" element={<Tours/>} />
           <Route path="/cart" element={<Cart/>} />
         </Routes>
         <Footer />
