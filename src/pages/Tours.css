@@ -27,3 +27,21 @@
   .no-margin-top {
     margin-top: 0 !important;
 }
+
+.icon-input-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: start; /* Aligns items to the start of the container */
+}
+
+.input-small {
+  width: 100px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.input-smaller {
+  width: 40px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  font-size: 14px; /* Adjust the font size as needed */
+}

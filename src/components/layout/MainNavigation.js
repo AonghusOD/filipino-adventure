@@ -32,11 +32,11 @@ export default function MainNavigation(props) {
             <li className="nav-item">
               <Link className="nav-link" to="/tours">Tours</Link>
             </li>
-            {/* Uncomment and update these links as per your routing needs
+
             <li className="nav-item">
-              <Link className="nav-link" to="/reservedbooks">ReservedBooks</Link>
+              <Link className="nav-link" to="/cart">Book</Link>
             </li>
-            */}
+            
           </ul>
         </div>
       </div>
