@@ -5,7 +5,7 @@ export default function Footer(props) {
     return (
         <footer className="navbar navbar-expand-lg navbar-light" 
         style={{ 
-            position: 'fixed', // Changed from 'absolute' to 'fixed'
+            position: 'relative', // Changed from 'absolute' to 'fixed'
             bottom: 0, // Changed from 'top: 0' to 'bottom: 0'
             left: 0, 
             width: '70%', 

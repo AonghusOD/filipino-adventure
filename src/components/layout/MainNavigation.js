@@ -28,10 +28,11 @@ export default function MainNavigation(props) {
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">Home Page</Link>
             </li>
-            {/* Uncomment and update these links as per your routing needs
+            
             <li className="nav-item">
-              <Link className="nav-link" to="/addnewbook">Add New Book</Link>
+              <Link className="nav-link" to="/tours">Tours</Link>
             </li>
+            {/* Uncomment and update these links as per your routing needs
             <li className="nav-item">
               <Link className="nav-link" to="/reservedbooks">ReservedBooks</Link>
             </li>

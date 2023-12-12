@@ -15,12 +15,15 @@
   }
   
   .image-section img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
   }
   
   .icons {
     display: flex;
-    gap: 10px; /* Adjust the space between icons */
+    gap: 5px; /* Adjust the space between icons */
   }
   
+  .no-margin-top {
+    margin-top: 0 !important;
+}
