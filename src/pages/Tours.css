@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .text-section {
+    flex: 1;
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px; /* Adjust the space between icons */
+  }
+  

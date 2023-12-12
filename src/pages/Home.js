@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import HeadImage from '../images/Hero.png'; // Adjust the path as necessary
+import HeadImage from '../images/Hero.png';
+import Tours from './Tours';
 
 
 
@@ -15,7 +16,11 @@ export default function () {
                 alt="Filipino Adventure"
                 style={{ width: '100%', height: 'auto' }}
             />
-            <h1>Hello WOrld!</h1>
+            
+
+<Tours />
+
+            
         </div>
     );
 }
