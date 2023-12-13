@@ -1,23 +1,59 @@
 import React, { useContext } from "react";
 import CartContext from "../context/CartContext";
-import { format } from 'date-fns'; // Importing a date formatting library
+import { format } from 'date-fns';
+import './Cart.css';
 
 const Cart = () => {
-  const [cart] = useContext(CartContext);
+  const [cart, setCart] = useContext(CartContext);
+
+  const handleRemoveItem = (index) => {
+    const newCart = cart.filter((_, i) => i !== index);
+    setCart(newCart);
+  };
+
+  const handleQuantityChange = (index, newQuantity) => {
+    const newCart = cart.map((item, i) => {
+      if (i === index) {
+        return { ...item, people: parseInt(newQuantity, 10) };
+      }
+      return item;
+    });
+    setCart(newCart);
+  };
+
+  const handleClearCart = () => {
+    setCart([]);
+  };
+
+  const totalPrice = cart.reduce((total, item) => total + (item.price * item.people), 0);
 
   return (
-    <div>
-      <h2>Your Cart</h2>
-      <ul>
+    <div className="cart-container">
+      <h2>Your Cart - Total: {totalPrice} php</h2>
+      <ul className="cart-list">
         {cart.map((item, index) => (
-          <li key={index}>
-            <p>Tour: {item.tour}</p>
-            <p>Date: {format(new Date(item.date), 'PPP')}</p> {/* Formatting the date */}
-            <p>People: {item.people}</p>
-            <p>Price: {item.price} php</p>
+          <li key={index} className="cart-item">
+            <img src={item.image} alt={item.tour} />
+            <div className="item-details">
+              <h3>{item.tour}</h3>
+              <p><i className="date-icon"></i> {format(new Date(item.date), 'PPP')}</p>
+              <div>
+                <i className="people-icon"></i>
+                <input 
+                  type="number" 
+                  value={item.people} 
+                  onChange={(e) => handleQuantityChange(index, e.target.value)}
+                  min="1"
+                />
+              </div>
+              <p><i className="price-icon"></i> {item.price} php</p>
+            </div>
+            <button className="remove-button" onClick={() => handleRemoveItem(index)}>Remove</button>
           </li>
         ))}
       </ul>
+      {cart.length > 0 && <button onClick={handleClearCart}>Clear Cart</button>}
+      {cart.length === 0 && <p>Your cart is empty</p>}
     </div>
   );
 };
