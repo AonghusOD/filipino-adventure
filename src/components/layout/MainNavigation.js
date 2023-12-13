@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './MainNavigation.css'; // Import your CSS file here
-import Logo from '../../images/logo.svg'; 
+import Logo from '../../images/footer.svg'; 
 
 
 export default function MainNavigation(props) {

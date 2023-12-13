@@ -47,7 +47,7 @@
 }
 
 .input-smallerdate {
-  width: 80px; /* Adjust the width as needed */
+  width: 8ch; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   font-size: 14px; /* Adjust the font size as needed */
 }

@@ -31,17 +31,18 @@ function Tours() {
         setPeopleCounts(newCounts);
     }
 
-    function addToCart(tourName, date, people, price) {
+    function addToCart(tour, date, people, price, imageSrc) {
         const newCartItem = {
-            tour: tourName,
+            tour: tour,
             date: date,
             people: people,
-            price: price
+            price: price,
+            image: imageSrc  // Add this line to include the image source in the cart item
         };
-
-        setCart([...cart, newCartItem]);
+    
+        setCart([...cart, { tour, date, people, price, image: imageSrc }]);
     }
-
+    
 
 
     return (
@@ -105,7 +106,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Beaches of Boracay", selectedDate, peopleCounts[0], 3000)}
+                                            onClick={() => addToCart("Beaches of Boracay", selectedDate, peopleCounts[0], 3000, Boracay)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -213,7 +214,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Beauty Of Palawan", selectedDate, peopleCounts[1], 3000)}
+                                            onClick={() => addToCart("Beauty Of Palawan", selectedDate, peopleCounts[1], 3000, Palawan)}
 
                                             style={{
                                                 backgroundColor: 'transparent',
@@ -322,7 +323,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Cebu Canyoneering", selectedDate, peopleCounts[2], 3000)}
+                                            onClick={() => addToCart("Cebu Canyoneering", selectedDate, peopleCounts[2], 3000, Cebu)}
 
                                             style={{
                                                 backgroundColor: 'transparent',
@@ -427,7 +428,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Swim With Sharks", selectedDate, peopleCounts[3], 3000)}
+                                            onClick={() => addToCart("Swim With Sharks", selectedDate, peopleCounts[3], 3000, Shark)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -529,7 +530,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Chocolate Hills", selectedDate, peopleCounts[4], 3000)}
+                                            onClick={() => addToCart("Chocolate Hills", selectedDate, peopleCounts[4], 3000, Choc)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -638,7 +639,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Views Of Albay", selectedDate, peopleCounts[5], 3000)}
+                                            onClick={() => addToCart("Views Of Albay", selectedDate, peopleCounts[5], 3000, Albay)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -747,7 +748,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Scuba Diving", selectedDate, peopleCounts[6], 3000)}
+                                            onClick={() => addToCart("Scuba Diving", selectedDate, peopleCounts[6], 3000, Scuba)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
