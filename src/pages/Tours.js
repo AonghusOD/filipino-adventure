@@ -91,7 +91,7 @@ function Tours() {
 
                             <div className="row">
                                 <div className="col-3">
-                                    <p>Price 3000 php</p>
+                                <p style={{marginBottom: '1px'}}><b>3000 php</b></p>
                                     <button onClick={addToCart}>Book Now</button>
                                 </div>
                                 <div className="col-3">
