@@ -25,11 +25,13 @@ function Tours() {
         const newCartItem = {
             tour: 'Beaches of Boracay',
             date: selectedDate,
-            people: numberOfPeople
+            people: numberOfPeople,
+            price: 3000 // or a dynamic value
         };
-
+    
         setCart([...cart, newCartItem]);
     }
+    
 
     return (
         <div className="container" style={{ marginTop: '20px' }}>

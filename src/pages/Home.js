@@ -16,11 +16,11 @@ export default function () {
                 alt="Filipino Adventure"
                 style={{ width: '100%', height: 'auto' }}
             />
-            
 
-<Tours />
 
-            
+            <Tours />
+
+
         </div>
     );
 }
