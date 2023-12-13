@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './Tours.css';
-import Boracay from '../images/img1.png';
+import Boracay from '../images/tours/img1.png';
 import TimeSheetIcon from '../images/icons/Timesheet.svg';
 import ClockIcon from '../images/icons/Clock.svg';
 import LanguageIcon from '../images/icons/Language.svg';
