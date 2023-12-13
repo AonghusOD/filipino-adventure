@@ -54,11 +54,11 @@ const Cart = () => {
           {/* Row for First Name and Last Name fields */}
           <div className="form-row">
             <label className="form-label">
-              First Name:
+              First Name*
               <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
             </label>
             <label className="form-label">
-              Last Name:
+              Last Name*
               <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
             </label>
           </div>
@@ -66,16 +66,14 @@ const Cart = () => {
           {/* Row for Email and Phone fields */}
           <div className="form-row">
             <label className="form-label">
-              Email:
+              Email*
               <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label className="form-label">
-              Phone:
+              Phone*
               <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
             </label>
           </div>
-
-          <button type="submit">Submit</button>
       </form>
   
       </div>
