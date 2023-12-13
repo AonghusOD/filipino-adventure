@@ -42,7 +42,7 @@ const Cart = () => {
   const totalPrice = cart.reduce((total, item) => total + (item.price * item.people), 0);
 
   return (
-<div style={{marginTop: '200px'}}>
+<div style={{marginTop: '150px'}}>
 <h1 style={{ color: 'blue', textAlign: 'center' }}>Complete Your Reservation</h1>
 <div style={{marginTop: '30px'}} className="cart-page-container">
 {cart.length > 0 && (
