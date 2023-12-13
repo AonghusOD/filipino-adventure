@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import { format } from 'date-fns';
 import './Cart.css';
@@ -13,6 +13,12 @@ import Scuba from '../images/tours/img7.png';
 
 const Cart = () => {
   const [cart, setCart] = useContext(CartContext);
+
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+
 
   const handleRemoveItem = (index) => {
     const newCart = cart.filter((_, i) => i !== index);
@@ -36,6 +42,48 @@ const Cart = () => {
   const totalPrice = cart.reduce((total, item) => total + (item.price * item.people), 0);
 
   return (
+<div style={{marginTop: '200px'}}>
+<h1 style={{ color: 'blue', textAlign: 'center' }}>Complete Your Reservation</h1>
+<div style={{marginTop: '30px'}} className="cart-page-container">
+{cart.length > 0 && (
+  <>
+    
+      <div className="form-container">
+      
+      <form>
+          {/* Row for First Name and Last Name fields */}
+          <div className="form-row">
+            <label className="form-label">
+              First Name:
+              <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+            </label>
+            <label className="form-label">
+              Last Name:
+              <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+            </label>
+          </div>
+
+          {/* Row for Email and Phone fields */}
+          <div className="form-row">
+            <label className="form-label">
+              Email:
+              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            </label>
+            <label className="form-label">
+              Phone:
+              <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+            </label>
+          </div>
+
+          <button type="submit">Submit</button>
+      </form>
+  
+      </div>
+   
+  </>
+)}
+
+
     <div className="cart-container">
       <h2>Your Bookings - Total: {totalPrice} php</h2>
       <ul className="cart-list">
@@ -65,6 +113,8 @@ const Cart = () => {
       </ul>
       {cart.length > 0 && <button onClick={handleClearCart}>Clear Cart</button>}
       {cart.length === 0 && <p>Your cart is empty</p>}
+    </div>
+    </div>
     </div>
   );
 };
