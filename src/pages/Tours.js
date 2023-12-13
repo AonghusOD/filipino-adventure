@@ -105,7 +105,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Beaches of Boracay", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Beaches of Boracay", selectedDate, peopleCounts[0], 3000)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -213,7 +213,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Beauty Of Palawan", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Beauty Of Palawan", selectedDate, peopleCounts[1], 3000)}
 
                                             style={{
                                                 backgroundColor: 'transparent',
@@ -322,7 +322,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Cebu Canyoneering", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Cebu Canyoneering", selectedDate, peopleCounts[2], 3000)}
 
                                             style={{
                                                 backgroundColor: 'transparent',
@@ -427,7 +427,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Swim With Sharks", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Swim With Sharks", selectedDate, peopleCounts[3], 3000)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -529,7 +529,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Chocolate Hills", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Chocolate Hills", selectedDate, peopleCounts[4], 3000)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -638,7 +638,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Views Of Albay", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Views Of Albay", selectedDate, peopleCounts[5], 3000)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
@@ -747,7 +747,7 @@ function Tours() {
                                     <div className="col-3">
                                         <p style={{ marginBottom: '1px' }}><b>3000</b> php</p>
                                         <button
-                                            onClick={() => addToCart("Scuba Diving", selectedDate, numberOfPeople, 3000)}
+                                            onClick={() => addToCart("Scuba Diving", selectedDate, peopleCounts[6], 3000)}
                                             style={{
                                                 backgroundColor: 'transparent',
                                                 color: 'blue',
